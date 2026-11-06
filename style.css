@@ -141,6 +141,11 @@ h3 {
     object-fit: contain;
 }
 
+.project-image-link:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: -3px;
+}
+
 .project-content {
     display: flex;
     flex: 1;
@@ -187,12 +192,6 @@ h3 {
 
 .site-header .button:focus-visible {
     outline-color: var(--accent);
-}
-
-.site-footer {
-    border-top: 1px solid var(--border);
-    padding-block: 1.25rem;
-    font-size: 0.9rem;
 }
 
 @media (max-width: 43rem) {
