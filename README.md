@@ -1,1 +1,2 @@
-# SD-Portfolio-NM09
+Ik heb een portfolio gemaakt over mijzelf en de projecten die ik heb gemaakt voor mijn opleiding SD.
+Ik heb AI gebruikt om mij te helpen met het maken van mijn portfolio maar ik heb het zo minimaal als mogelijk gehouden zodat ik zelf het meeste heb gedaan.
