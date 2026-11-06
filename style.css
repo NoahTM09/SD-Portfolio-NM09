@@ -1,0 +1,203 @@
+:root {
+    --ink: #142b47;
+    --body-text: #33465c;
+    --page: #eef4fa;
+    --border: #ccdae8;
+    --blue: #174c70;
+    --accent: #bcebe0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--body-text);
+    font-family: Manrope, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: min(100% - 2rem, 64rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    background: var(--ink);
+    color: white;
+    border-bottom: 0.35rem solid var(--accent);
+}
+
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.75rem 3rem;
+    padding-block: clamp(2.5rem, 7vw, 5rem);
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.18;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 4.75rem);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+h2,
+h3 {
+    color: var(--ink);
+}
+
+h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 4vw, 2.35rem);
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.45rem;
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.site-header .eyebrow {
+    color: var(--accent);
+}
+
+.intro-text {
+    margin: 0.65rem 0 1.4rem;
+    font-size: 1.125rem;
+}
+
+.profile-photo {
+    display: block;
+    width: 11rem;
+    height: 11rem;
+    object-fit: cover;
+    object-position: center 57%;
+    border: 3px solid var(--accent);
+    border-radius: 1.25rem;
+}
+
+.portfolio-section,
+.project-section {
+    margin-block: clamp(2.5rem, 6vw, 4rem);
+}
+
+.portfolio-container,
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card,
+.project-card {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: white;
+}
+
+.card {
+    flex: 1 1 0;
+    padding: 1.25rem;
+    border-top: 0.25rem solid var(--blue);
+}
+
+.card p {
+    margin: 0.6rem 0 0;
+}
+
+.project-card {
+    display: flex;
+    flex: 0 0 calc((100% - 1rem) / 2);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #e6edf5;
+    object-fit: contain;
+}
+
+.project-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+}
+
+.project-content > p:not(.eyebrow) {
+    margin: 0.55rem 0 1.1rem;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--blue);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-header .button {
+    background: var(--accent);
+    color: var(--ink);
+}
+
+.button:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+}
+
+.site-header .button:focus-visible {
+    outline-color: var(--accent);
+}
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding-block: 1.25rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 43rem) {
+    .card,
+    .project-card {
+        flex-basis: 100%;
+    }
+}
